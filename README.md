@@ -2,4 +2,4 @@
 
 This is my student website created for ART128
 
-[View my Site](https://hobblingoblin.io/studentsite)
+[View my Site](https://hobblingoblin.github.io/studentsite)
