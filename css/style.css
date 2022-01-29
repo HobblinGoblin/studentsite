@@ -1,29 +1,118 @@
-body{
-    background: rgb(216, 198, 238);
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 0;
-    text-align: center;
-    display: grid;
-    align-content: center;
-    min-height: 100vh;
+/* Global Reset */
+*{box-sizing: border-box}
+body { margin: 0; }
+
+/* GLOBAL COLORS */
+body { color: rgba(0, 0, 0, 0.8); }
+a { color:sienna; }
+a:hover { color: saddlebrown; }
+
+/* GLOBAL TYPOGRAPHY */
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 88.75%; /* 14px */
+  line-height: 1.5;
 }
 
-h1{
-    font-size: 50px;
+/*HEADER*/
+header{
+    background-color: rgba(0,102,204,1);
+    color:sandybrown;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
-h2{
+
+header a{
+    color: sandybrown;
+    text-decoration: saddlebrown;
+}
+
+header a:hover {
+    color: sienna
+}
+
+/* Site ID */
+.site-id h1{
+    margin:0;
+}
+
+/* Site NAV */
+.site-nav ul{
+    display: flex; 
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.site-nav a{
+    display:block;
+    padding: 1em;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.198);
+    padding: 1em;
+}
+
+/* SOCIAL NAV */
+.social-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.social-nav  a {
+    display: block;
+    padding: 1em;
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgba(0, 102, 204, 1);
+    text-align: center;
+    color: rgb(231, 242, 243);
+    padding: 6em 1em;
+}
+
+.hero h2 {
+    font-size: 2em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.hero p {
+    max-width: 30em;
+    margin: 1em auto;
+}
+
+/* COURSES SECTION */
+.courses {
+    background-color:rgb(212, 245, 248);
+    color:sandybrown;
+    padding: 6em 1em;
+    display: grid;
+    justify-content: center;
+}
+
+.courses ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.courses h3 {
     text-align: center;
 }
-p{
-    color: white;
-    max-width: 35em;
-    margin:0 auto;
-}
-ul{ /*display: table;
-    text-align: left;*/
-    margin: 0 auto;
-    padding: 0;
-}
-a {
-    color: white;
-}
+
+
+/* FOR WEB DEV PURPOSES ONLY */
+/* body, * {
+    background-color: rgba(0,0,0,.05);
+    border: 1px solid rgba(0,0,0,.1);
+    color: rgba(0,0,0,.5);
+}*/
