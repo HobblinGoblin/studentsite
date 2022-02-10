@@ -5,9 +5,9 @@ body { margin: 0; }
 /* GLOBAL COLORS */
 body { 
     background-color: rgb(212, 216, 223);
-    color:rgb(62, 72, 85); }
-a { color:rgb(131, 135, 141); }
-a:hover { color: rgb(106, 109, 114); }
+    color:rgb(47, 55, 65); }
+a { color:rgb(102, 95, 102); }
+a:hover { color: rgb(255, 255, 255); }
 
 /* GLOBAL TYPOGRAPHY */
 body {
