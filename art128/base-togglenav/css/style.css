@@ -321,6 +321,10 @@ body.demo::before {
     padding: 1em;
 }
 
+.site-nav .menu-button{
+    display: none;
+}
+
 /* hero */
 
 .hero{
@@ -342,9 +346,76 @@ section{
 
 
 /* site footer */
-.site-footer {
+.site-footer{
     /* background-color:rgba(0, 0, 255, .2); */
 }
 
 
+/* Toggle Nav */
+@media (max-width: 767px){
+    .toggle-nav .site-id{
+        position:absolute;
+    }
+    .toggle-nav .site-nav{
+        text-align: right;
+    }
 
+    .toggle-nav li a::hover{
+        color: #fff;
+        background: #036;
+    }
+
+    .toggle-nav .menu-button{
+        margin: 0.8em 0;
+        display: inline-block;
+        background-color: transparent;
+        border: 1px black;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .toggle-nav .menu-button::selection{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .toggle-nav .site-nav ul{
+        display: block;
+        text-align: center;
+    }
+    .toggle-nav .site-nav a:hover{
+        background-color: rgba(0,0,153,1);
+        color:white;
+    }
+    .toggle-nav[data-navstate="closed"] ul{
+        height: 0;
+        overflow: hidden;
+    }
+    .toggle-nav[data-navstate="open"] ul{
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Navicon */
+    .toggle-nav .site-nav .menu-button.navicon{
+        border: none;
+        color: rgba(255,255,255,0);
+    }
+
+    .toggle-nav .site-nav .menu-button.navicon::after{
+        color: #333;
+        content: "\2630";
+        font-size: 1.5em;
+        padding: 0 .4em;
+        margin: 0;
+        /* margin-top: -0.1em;
+        margin-left: 0.5em;
+        width: 1em;
+        height: 1em;
+        line-height: 1em; */
+        display: inline-block;
+    }
+
+    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after{
+        content:"\2715";
+    }
+
+}
