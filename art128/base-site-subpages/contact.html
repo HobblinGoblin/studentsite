@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <!-- for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <!-- For small screens/mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <title>Site Name | Contact</title>
+    <meta name="description" content="This is a starter html + css+ JS boiler plate set of code for website projects."/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="site-header toggle-nav" data-navstate="closed">
+        <div class="container">
+            <div class="site-id">
+                <h1><a href="index.html">Base Site</a></h1>
+            </div>
+
+            <nav class="site-nav">
+                <button class="menu-button navicon">Menu</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-main">
+            <section class="hero">
+                <h1>Contact Us</h1>
+                <p>This is a sub page example with a hero at top and an example contact form below.</p>
+            </section>
+      
+        
+        <div class="container">
+            
+            <form>
+                <label for="contact_name">Name:</label>
+                <input type="text" id="contact_name" name="contact_name"/>
+
+                <label for="contact_email">Email Address:</label>
+                <input type="text" id="contact_email" name="contact_email"/>
+
+                <label for="contact_message">Message:</label>
+                <textarea id="contact_message" name="contact_message"></textarea>
+
+                <input type="submit" value="Submit"/>
+            </form>
+                
+
+            
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Main JS file -->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

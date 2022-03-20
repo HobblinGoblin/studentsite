@@ -1,0 +1,502 @@
+/* #BASE CSS (Initital Setup)
+---------------------------------
+    #BASE CONTENT
+        #TYPOGRAPHY
+            #BODY
+            #HEADINGS
+            #PARAGRAPHS
+            #LINKS
+            #HELPERS
+        #MEDIA
+            #IMAGES
+        #COMPONENTS
+            #BUTTONS
+    #BASE LAYOUT
+        #SIMPLE RESET
+        #CONTAINER
+        #MEDIAQUERIES
+        #GRID SYSTEM
+            #CLEARFIX
+    #BASE SITE
+        #SITE STRUCTURE
+            #HEADER
+                # site-id (LOGO)
+            #FOOTER
+            #SECTIONS
+            #SUB PAGES
+        #SITE NAVIGATION
+            #TOGGLE-NAV (Default for Small Screens)
+--------------------------------- */
+
+/* Typography - Base Body */
+body {
+    font-size: 87.5%; /* 14px */
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: rgba(0,0,0,.9);
+}
+
+/* Typography - Headings */
+/* Based on Traditional Typographic Scale 48, 36, 24, 21, 18, 16*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    margin: .5em 0;
+}
+
+h1{
+    font-size: 3em; /*48*/
+    line-height: 1;
+}
+
+h2{
+    font-size: 2.2em; /*36*/
+    line-height: 1.1;
+}
+
+h3{
+    font-size: 1.5em; /*24*/
+    line-height: 1.2;
+}
+
+h4{
+    font-size: 1.3125em; /*21*/
+    line-height: 1.3;
+}
+
+h5{
+    font-size: 1.125em; /*18*/
+    line-height: 1.4;
+}
+
+h6{
+    font-size: 1em; /*16*/
+    line-height: 1.5;
+}
+
+/* Paragraphs */
+p {
+    margin: 0 0 0.5em 0;
+    max-width: 38em;
+}
+
+strong{
+    font-weight:700;
+}
+
+em{
+    font-style: italic;
+}
+
+/* Links */
+a {
+    color: rgba(0, 0, 153, .8);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(0, 0, 153, 1);
+    text-decoration: underline; 
+}
+
+/* Helper Class (Utility Classes) */
+.text-centered{
+    text-align: center;
+}
+
+.full-width{
+    max-width: none;
+    width: 100%;
+}
+
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons*/
+.button,
+button,
+form input[type=submit] {
+    font-size: inherit;
+    line-height: 1;
+    background-color: rgba(0, 0, 204, 1);
+    border: 1px solid rgba(0, 0, 204, 1);
+    color: rgba(255, 255, 255, 1);
+    padding: 1em;
+    display: inline-block;
+    margin: .5em .5em .5em 0;
+    text-align: center;
+    border-radius: .5em; 
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover,
+form input[type=submit]:hover {
+    background-color:rgba(0, 0, 153, 1);
+    border-color: rgba(0, 0, 153, 1);
+    color:rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+.button.alt {
+    background-color: transparent;
+    color: rgba(0, 0, 153, 1);
+}
+
+.button.alt:hover {
+    background-color:rgba(0, 0, 153, 1);
+    color:rgba(255, 255, 255, 1);
+    
+}
+
+/* Layout */
+/* Simple Reset */
+* {box-sizing: border-box;}
+body { margin:0}
+
+/* container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+   /*tablet sized styling would go here  */
+}
+
+@media (min-width: 1050px) {
+    body {
+        font-size: 100%; /*16px*/   
+    }
+    
+}
+
+@media (min-width: 1250px) {
+    body {
+        font-size: 112.5%; /*18px*/   
+    }
+    .container{
+        max-width: 1200px;
+    }
+}
+
+/* For demo purposes only */
+body.demo {
+    padding-top: 2em;
+}
+body.demo::before {
+    content: "Small (Mobile less than 768px)";
+    background-color: #933;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    color: white;
+    padding: .5em;
+} 
+
+@media (min-width: 768px) {
+    body.demo::before{
+        background-color: #bcb83d;
+        content: "Midsize (Tablet 768px - 1050px)"
+
+    }
+}
+
+@media (min-width: 1050px) {
+    body.demo::before{
+        background-color: #693;
+        content: "Large (Notebook 1050px - 1250px)"
+    }
+}
+
+@media (min-width: 1250px) {
+    body.demo::before{
+        background-color: #09c;
+        content: "XLarge (Desktop greater than 1250px)"
+    }
+}
+
+/* Semantic Grid System */
+.row > .column {
+    margin-bottom: 4%;
+}
+
+@media (min-width: 768px) {
+    .row{
+        display: flex;
+        justify-content: space-between;
+        margin-left: -2%;
+        margin-right: -2%;
+    }
+
+    .row > .column{
+        flex-grow: 1;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    .row > .column.one-half {
+        max-width: 46%;
+    }
+
+    .row > .column.one-third {
+        max-width: 29.3333%;
+    }
+
+    .row > .column.two-thirds {
+        max-width: 62.66666%;
+    }
+
+    .row> .column.one-fourth {
+        max-width: 21%;
+    }
+
+    .row> .column.centered {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* for Demo only */
+.demo .column {
+    background: rgba(0, 0, 0, .2);
+    padding: .5em;
+    text-align: center;
+}
+
+/* site structure */
+/* site header */
+.site-header {
+    padding: 1em 0;
+}
+
+/* larger screens left right, small screens centered */
+@media (min-width: 768px){
+.site-header .container{
+    display: flex;
+    justify-content: space-between;
+
+}}
+
+/* Styling for both Header and Footer */
+.site-header a,
+.site-footer a{
+    color: rgba(0, 0, 0, .8);
+}
+
+.site-header a:hover,
+.site-footer a:hover{
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+/* logo area */
+.site-id h1{
+    font-size: 1.5em;
+    margin: 0;
+    text-align: center;
+    padding-top: .6em;
+}
+
+/* site nav */
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+/* a tags are inline by default */
+.site-nav a{
+    display: block;
+    padding: 1em;
+}
+
+.site-nav .menu-button{
+    display: none;
+}
+
+/* hero */
+
+.hero{
+    background-color: rgba(0, 0, 0, .1);
+    padding: 6em 4%;
+    text-align:center;
+}
+
+.hero h1, p{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* sections */
+section{
+    padding: 3em 0;
+}
+
+
+/* site footer */
+.site-footer{
+    /* background-color:rgba(0, 0, 255, .2); */
+}
+
+
+/* Toggle Nav */
+@media (max-width: 767px){
+    .toggle-nav .site-id{
+        position:absolute;
+    }
+    .toggle-nav .site-nav{
+        text-align: right;
+    }
+
+    .toggle-nav li a::hover{
+        color: #fff;
+        background: #036;
+    }
+
+    .toggle-nav .menu-button{
+        margin: 0.8em 0;
+        display: inline-block;
+        background-color: transparent;
+        border: 1px black;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .toggle-nav .menu-button::selection{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .toggle-nav .site-nav ul{
+        display: block;
+        text-align: center;
+    }
+    .toggle-nav .site-nav a:hover{
+        background-color: rgba(0,0,153,1);
+        color:white;
+    }
+    .toggle-nav[data-navstate="closed"] ul{
+        height: 0;
+        overflow: hidden;
+    }
+    .toggle-nav[data-navstate="open"] ul{
+        height: auto;
+        overflow: visible;
+    }
+
+    /* Navicon */
+    .toggle-nav .site-nav .menu-button.navicon{
+        border: none;
+        color: rgba(255,255,255,0);
+    }
+
+    .toggle-nav .site-nav .menu-button.navicon::after{
+        color: #333;
+        content: "\2630";
+        font-size: 1.5em;
+        padding: 0 .4em;
+        margin: 0;
+        /* margin-top: -0.1em;
+        margin-left: 0.5em;
+        width: 1em;
+        height: 1em;
+        line-height: 1em; */
+        display: inline-block;
+    }
+
+    .toggle-nav[data-navstate="open"] .site-nav .menu-button.navicon::after{
+        content:"\2715";
+    }
+
+}
+
+/* Sub-pages */
+
+article{
+    max-width:38em;
+    margin: 0 auto 8em auto;
+    padding: 2em 0;
+}
+
+article h1, h2, .date{
+    text-align: center;
+}
+
+article h2{
+    font-weight: normal;
+    font-size: 1.5em;
+    line-height: 1.2;
+    opacity: .7;
+}
+
+article .date{
+  text-align: center;
+  font-size: 0.625em;
+  line-height: 0.625em;
+  color: #999;
+  font-weight: normal;
+}
+
+article p + h1,
+article p + h2,
+article p + h3,
+article p + h4,
+article p + h5,
+article p + h6{
+    margin-top: 1.5em;
+}
+
+article .date + p {
+    margin-top: 2em;
+  }
+
+
+/* Forms */
+form{
+    max-width: 600px;
+    margin: 2em auto;
+}
+form label,
+form input,
+form textarea{
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    font-size: 1em;
+}
+
+form input[type='text'],
+form textarea{
+    border: 1px solid #ccc;
+    padding: .5em;
+    color: #666;
+}
+
+form textarea{
+    min-height: 10em;
+    line-height: 1.5;
+}
+
+
+form label{
+    margin-top: 1em;
+    margin-bottom: .25em
+}
+
+form input[type=submit] {
+    width:auto;
+    margin-top: 2em;
+}
