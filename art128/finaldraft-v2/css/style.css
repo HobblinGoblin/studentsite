@@ -469,7 +469,9 @@ article .date + p {
 /* reviews */
 
 .reviews{
-    background-color: rgba(0, 0, 0, .1);
+    background-image: url(../img/Antherium-design-back.jpg);
+    background-size: 100%;
+    opacity: 50%;
     padding: 6em 4%;
     text-align:center;
 }
@@ -541,4 +543,11 @@ form input[type=submit] {
     #contact{
         padding-bottom: 20em;
     }
+}
+
+#contact{
+    background-image: url(../img/antherium-design-side.jpg);
+    background-size: 100%;
+    background-position: ;
+    opacity: .3;
 }
