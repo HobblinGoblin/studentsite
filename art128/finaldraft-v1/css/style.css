@@ -335,7 +335,7 @@ body.demo::before {
     background-image: url(../img/Baxter_website.jpg); 
     background-size:cover;
     /* background-color: rgba(0, 0, 0, .1); */
-    padding: 6em 4%;
+    padding: 20vh 4%;
     text-align:center;
 }
 
