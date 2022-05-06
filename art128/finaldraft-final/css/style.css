@@ -55,12 +55,12 @@ h1{
     font-size: 3em; /*48*/
     font-family: fino-sans, sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 100;
     line-height: 1;
 }
 
 h2{
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: fino-sans, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -68,7 +68,7 @@ h2{
 }
 
 h3{
-    font-size: 1.5em; /*24*/
+    font-size: 1.3em; /*24*/
     font-family: span, serif;
     font-weight: 700;
     font-style: normal;
@@ -77,12 +77,13 @@ h3{
 }
 
 h4{
-    font-size: 1.6em; /*21*/
+    font-size: 1.2em; /*21*/
     font-family: span, serif;
     font-weight: 200;
     font-style: normal;
     line-height: 1.5;
     text-align: center;
+    color:rgb(136, 57, 165)
 }
 
 h5{
@@ -134,7 +135,7 @@ a:hover {
 
 
 /* Images */
-img {
+img, video {
     max-width: 100%;
     height: auto;
 }
@@ -358,24 +359,27 @@ body.demo::before {
 /* hero */
 
 .hero{
-    background-image: url(../img/Baxter_website.jpg); 
-    background-size:cover;
+    background-image: url(../img/Baxter_website.png); 
+    background-size: cover;
     /* background-color: rgba(0, 0, 0, .1); */
-    padding: 20vh 4%;
-    text-align:center;
+    padding: 62vh 0;
+    color: white;
 }
 
-.hero h1, p{
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+.hero h1, h5{
+    margin: 0;
+    text-align: right;
 }
+
 
 /* sections */
 section{
     padding: 3em 0;
 }
 
+section.section2{
+    padding: 0;
+}
 
 /* site footer */
 .site-footer{
@@ -452,45 +456,6 @@ section{
 
 }
 
-/* Sub-pages */
-
-article{
-    max-width:38em;
-    margin: 0 auto 8em auto;
-    padding: 2em 0;
-}
-
-article h1, h2, .date{
-    text-align: center;
-}
-
-article h2{
-    font-weight: normal;
-    font-size: 1.5em;
-    line-height: 1.2;
-    opacity: .7;
-}
-
-article .date{
-  text-align: center;
-  font-size: 0.625em;
-  line-height: 0.625em;
-  color: #999;
-  font-weight: normal;
-}
-
-article p + h1,
-article p + h2,
-article p + h3,
-article p + h4,
-article p + h5,
-article p + h6{
-    margin-top: 1.5em;
-}
-
-article .date + p {
-    margin-top: 2em;
-  }
 
 /* reviews */
 
