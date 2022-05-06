@@ -28,10 +28,14 @@
             #TOGGLE-NAV (Default for Small Screens)
 --------------------------------- */
 
+
+
 /* Typography - Base Body */
 body {
     font-size: 87.5%; /* 14px */
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: span, serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
     color: rgba(0,0,0,.9);
 }
@@ -49,26 +53,42 @@ h6{
 
 h1{
     font-size: 3em; /*48*/
+    font-family: fino-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
     line-height: 1;
 }
 
 h2{
-    font-size: 2.2em; /*36*/
-    line-height: 1.1;
+    font-size: 2em;
+    font-family: fino-sans, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
 }
 
 h3{
     font-size: 1.5em; /*24*/
+    font-family: span, serif;
+    font-weight: 700;
+    font-style: normal;
     line-height: 1.2;
+    text-align: center;
 }
 
 h4{
-    font-size: 1.3125em; /*21*/
-    line-height: 1.3;
+    font-size: 1.6em; /*21*/
+    font-family: span, serif;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 1.5;
+    text-align: center;
 }
 
 h5{
     font-size: 1.125em; /*18*/
+    font-family: span, serif;
+    font-weight: 500;
     line-height: 1.4;
 }
 
@@ -93,13 +113,13 @@ em{
 
 /* Links */
 a {
-    color: rgba(0, 0, 153, .8);
+    color: rgba(34, 43, 38, 0.8);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgba(0, 0, 153, 1);
-    text-decoration: underline; 
+    color: rgba(56, 93, 72, 0.8);
+    text-decoration: none; 
 }
 
 /* Helper Class (Utility Classes) */
@@ -277,9 +297,15 @@ body.demo::before {
 
 /* site structure */
 /* site header */
-.site-header {
+.site-header, .site-footer {
     padding: 1em 0;
-    background-color: white;
+    background-color: rgb(43, 35, 46);
+}
+
+.site-footer img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
 }
 
 /* larger screens left right, small screens centered */
@@ -293,12 +319,12 @@ body.demo::before {
 /* Styling for both Header and Footer */
 .site-header a,
 .site-footer a{
-    color: rgba(0, 0, 0, .8);
+    color:rgba(255, 255, 255, 0.815);
 }
 
 .site-header a:hover,
 .site-footer a:hover{
-    color: rgba(0, 0, 0, 1);
+    color:rgb(197, 161, 210);
     text-decoration: none;
 }
 
@@ -403,11 +429,11 @@ section{
     /* Navicon */
     .toggle-nav .site-nav .menu-button.navicon{
         border: none;
-        color: rgba(255,255,255,0);
+        color: rgba(255, 255, 255, 0);
     }
 
     .toggle-nav .site-nav .menu-button.navicon::after{
-        color: #333;
+        color: rgba(243, 243, 243, 0.864);
         content: "\2630";
         font-size: 1.5em;
         padding: 0 .4em;
